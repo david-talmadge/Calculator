@@ -14,9 +14,16 @@
       /*let input = prompt('');
       alert(``);
       console.log('');*/
-      let equation = '';
+      var equation = '';
         
-      document.getElementById("equationBox").innerHTML = equation;
+      function input(let i){
+        if(i=="="){
+          
+        }else{
+          equation+=i;
+        }
+        document.getElementById("equationBox").innerHTML = equation;
+      }
     </script>
     
     <div class="wrapper">
@@ -24,7 +31,7 @@
         <h1 id="result"></h1>
       </div>
       <div class="box1">
-       <button id="b1" type="button">1</button>
+       <button id="b1" type="button" onclick="input(1)">1</button>
       </div>
        <div class="box2">
         <button id="b2" type="button">2</button>
