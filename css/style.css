@@ -8,14 +8,14 @@ body {
 }
 h1 {
   /*color:#ffdfad;*/
-  text-shadow: 2px 2px 2px #361701;
+  text-shadow: 1px 1px 1px #361701;
   font-style:normal;
   text-align:center;
 }  
 h2, h3 {
   font-family: "Berkshire Swash", sans-serif;
   /*color:#ffdfad;*/
-  text-shadow: 4px 4px 4px #361701;
+  text-shadow: 1px 1px 1px #361701;
   font-style:oblique;
 /*font-size:30px; */
 }
