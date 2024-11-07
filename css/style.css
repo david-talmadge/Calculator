@@ -99,10 +99,14 @@ legend, fieldset {
   grid-row: 4;
 }
 .box13 {
+  grid-column: 1/4;
+  grid-row: 5/6;
+}
+.box14 {
   grid-column: 4;
   grid-row: 5;
 }
-.box14 {
+.box15 {
   grid-column: 4;
   grid-row: 6;
 }
