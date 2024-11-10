@@ -37,12 +37,16 @@
         let opp=prompt(`What operation would you like to perform +, -, *, / ? `);
         let result1=0;
         for(let i=0;i<array.length;i++){
-          if(opp==='+') result1 += parseInt(array[i]);
-          if(opp==='-') result1 -= parseInt(array[i]);
-          if(opp==='*') result1 *= parseInt(array[i]);
-          if(opp==='/'){
-             if(array.length>2) alert('Cannot use more than 2 numbers for division.');
-             if(array.length===2) result1 /= parseInt(array[i]);
+          if(i===0){
+            result1 += parseInt(array[i]);
+          }else{
+            if(opp==='+') result1 += parseInt(array[i]);
+            if(opp==='-') result1 -= parseInt(array[i]);
+            if(opp==='*') result1 *= parseInt(array[i]);
+            if(opp==='/'){
+               if(array.length>2) alert('Cannot use more than 2 numbers for division.');
+               if(array.length===2) result1 /= parseInt(array[i]);
+            }
           }
         }
         return result1;
