@@ -11,71 +11,30 @@
   </head>
   <body>
     <script>
-      var num1 = prompt('Welcome to the calculator. Please enter a number. ');
-      loop1();
-      loop2();
-      alert(``);
+      var array = new Array();
+      let num1 = prompt('Welcome to the calculator. Please enter a number. ');
+      let num2 = prompt(`You entered ${num1}. Enter another y/n? `);
+      loop(prompt(`You entered `+array.length+` numbers, are there more y/n ? `));
+      calc(prompt(`What operation would you like to perform +, -, *, / ? `));
       console.log('');
       document.getElementById("result").innerHTML = equation;
 
-      function loop1(){
-        var num2=prompt(`You entered ${num1}. Enter another y/n? `);
-        if(num2==='y')loop();
+      function loop(prompt){
+        let num3=prompt;
+        array.push(num3);
+        if(num3==='y')loop();
       }
-      function loop2(){
-        var num3=prompt(`You entered ${nums} numbers, are there more y/n? `);
-        if(num2==='y')loop();
+      function calc(prompt){
+        let num3=prompt;
+        for(let i=0;i<array.length;i++){
+          let num2 = prompt(`You entered `+ array.length + "${num1}. Enter another y/n? `);
+        }
       }
     </script>
     
     <div class="wrapper">
       <div class="boxStart">
         <h1 id="result"></h1>
-      </div>
-      <div class="box1">
-       <button id="b1" type="button" onclick="input('1')">1</button>
-      </div>
-       <div class="box2">
-        <button id="b2" type="button" onclick="input('2')>2</button>
-      </div>
-       <div class="box3">
-        <button id="b3" type="button" onclick="input('3')>3</button>
-      </div>
-       <div class="box4">
-        <button id="b4" type="button" onclick="input('+')>+</button>
-      </div>
-       <div class="box5">
-        <button id="b5" type="button" onclick="input('4')>4</button>
-      </div>
-       <div class="box6">
-        <button id="b6" type="button" onclick="input('5')>5</button>
-      </div>
-       <div class="box7">
-        <button id="b7" type="button" onclick="input('6')>6</button>
-      </div>
-       <div class="box8">
-        <button id="b8" type="button" onclick="input('-')>-</button>
-      </div>
-       <div class="box9">
-        <button id="b9" type="button" onclick="input('7')>7</button>
-      </div>
-       <div class="box10">
-         <button id="b10" type="button" onclick="input('8')>8</button>
-      </div>
-       <div class="box11">
-        <button id="b11" type="button" onclick="input('9')>9</button>
-      </div>
-       <div class="box12">
-        <button id="b12" type="button" onclick="input('*')>*</button>
-      </div>
-       <div class="box13">
-        <button id="b12" type="button" onclick="input('0')>0</button>
-      </div>
-       <div class="box14">
-        <button id="b14" type="button" onclick="input('/')>/</button>
-      </div>
-       <div class="box15">
-        <button id="b15" type="button" onclick="input('=')>=</button>
       </div>
       <div class="boxEnd">
         <p><a href="index.html">Back to the Main Page</a>  <span style="float:right;">This page created as academic activity only.</span></p>
