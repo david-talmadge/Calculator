@@ -12,37 +12,43 @@
   <body>
     <script>
       var array = new Array();
-      let num1 = prompt('Welcome to the calculator. Please enter a number. ');
-      let num2 = prompt(`You entered ${num1}. Enter another y/n? `);
-      loop(prompt(`You entered `+array.length+` numbers, are there more y/n ? `));
-      calc(prompt(`What operation would you like to perform +, -, *, / ? `));
+      loop1();
       console.log('');
       document.getElementById("result").innerHTML = equation;
-
-      function loop(prompt){
-        let num3=prompt;
-        array.push(num3);
-        if(num3==='y')loop();
+      
+      function loop1(){
+        loop2();
+        let more = prompt(`You entered `+array.length+` numbers, are there more y/n ? `);
+        if(more==='y')loop2();
+        let result2 = calc(prompt(`What operation would you like to perform +, -, *, / ? `));
+        let p = prompt(`You entered `+array.length+` numbers. Your answer is ${result2}. Would you like to perform another calculation y/n ? `);
+        if(p==='y')loop1();
+      }
+      function loop2(){
+        let num1 = prompt('Welcome to the calculator. Please enter a number. ');
+        array.push(num1);
+        let p = prompt(`You entered ${num1}. Enter another y/n? `);
+        if(p==='y')loop2();
       }
       function calc(prompt){
-        let num3=prompt;
-        let result=0;
+        let opp=prompt;
+        let result1=0;
         for(let i=0;i<array.length;i++){
-          if(num3==='+'){
-             result += array[i];
+          if(opp==='+'){
+             result1 += array[i];
           }
-          if(num3==='-'){
+          if(opp==='-'){
              result -= array[i];
           }
-          if(num3==='*'){
+          if(opp==='*'){
              result *= array[i];
           }
-          if(num3==='/'){
+          if(opp==='/'){
              result /= array[i];
           }
         }
+        return result;
       }
-      let num2 = prompt(`You entered `+ array.length + "${num1}. Enter another y/n? `);
     </script>
     
     <div class="wrapper">
