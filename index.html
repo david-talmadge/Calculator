@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -26,10 +26,23 @@
       }
       function calc(prompt){
         let num3=prompt;
+        let result=0;
         for(let i=0;i<array.length;i++){
-          let num2 = prompt(`You entered `+ array.length + "${num1}. Enter another y/n? `);
+          if(num3==='+'){
+             result += array[i];
+          }
+          if(num3==='-'){
+             result -= array[i];
+          }
+          if(num3==='*'){
+             result *= array[i];
+          }
+          if(num3==='/'){
+             result /= array[i];
+          }
         }
       }
+      let num2 = prompt(`You entered `+ array.length + "${num1}. Enter another y/n? `);
     </script>
     
     <div class="wrapper">
