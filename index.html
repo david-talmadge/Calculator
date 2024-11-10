@@ -35,16 +35,16 @@
         let result1=0;
         for(let i=0;i<array.length;i++){
           if(opp==='+'){
-             result1 += array[i];
+             result1 += parseInt(array[i]);
           }
           if(opp==='-'){
-             result1 -= array[i];
+             result1 -= parseInt(array[i]);
           }
           if(opp==='*'){
-             result1 *= array[i];
+             result1 *= parseInt(array[i]);
           }
           if(opp==='/'){
-             result1 /= array[i];
+             result1 /= parseInt(array[i]);
           }
         }
         return result1;
