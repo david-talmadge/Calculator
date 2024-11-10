@@ -13,15 +13,15 @@
     <script>
       var array = new Array();
       loop1();
-      console.log('');
-      document.getElementById("result").innerHTML = equation;
       
       function loop1(){
         loop2();
         let more = prompt(`You entered `+array.length+` numbers, are there more y/n ? `);
         if(more==='y')loop2();
-        let result2 = calc(prompt(`What operation would you like to perform +, -, *, / ? `));
+        let result2 = calc();
         let p = prompt(`You entered `+array.length+` numbers. Your answer is ${result2}. Would you like to perform another calculation y/n ? `);
+        document.getElementById("result").innerHTML = result2;
+        console.log(result2);
         if(p==='y')loop1();
       }
       function loop2(){
@@ -30,24 +30,24 @@
         let p = prompt(`You entered ${num1}. Enter another y/n? `);
         if(p==='y')loop2();
       }
-      function calc(prompt){
-        let opp=prompt;
+      function calc(){
+        let opp=prompt(`What operation would you like to perform +, -, *, / ? `);
         let result1=0;
         for(let i=0;i<array.length;i++){
           if(opp==='+'){
              result1 += array[i];
           }
           if(opp==='-'){
-             result -= array[i];
+             result1 -= array[i];
           }
           if(opp==='*'){
-             result *= array[i];
+             result1 *= array[i];
           }
           if(opp==='/'){
-             result /= array[i];
+             result1 /= array[i];
           }
         }
-        return result;
+        return result1;
       }
     </script>
     
